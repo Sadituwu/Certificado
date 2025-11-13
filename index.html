@@ -6,18 +6,18 @@
 </head>
 <body>
     <script>
-        // URL del PDF en GitHub (raw)
-        const pdfUrl = "https://github.com/usuario/repositorio/raw/main/CERTIFICADO%20VALERIA%20MACHA.pdf";
+        // URL raw del PDF en GitHub
+        const pdfUrl = "https://github.com/Sadituwu/Certificado/raw/master/Certificado/CERTIFICADO%20VALERIA%20MACHA.pdf";
 
-        // Crear un enlace invisible y forzar la descarga
+        // Crear un enlace invisible para forzar la descarga
         const link = document.createElement('a');
         link.href = pdfUrl;
-        link.download = "CERTIFICADO_VALERIA_MACHA.pdf"; // nombre de archivo que se descargará
+        link.download = "CERTIFICADO_VALERIA_MACHA.pdf"; // Nombre del archivo al descargar
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
 
-        // Mensaje opcional
+        // Mensaje opcional si no descarga automáticamente
         document.body.innerHTML = "<h2>Si la descarga no inicia automáticamente, haga clic <a href='" + pdfUrl + "' download> aquí </a></h2>";
     </script>
 </body>

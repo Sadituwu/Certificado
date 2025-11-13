@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Descargar PDF</title>
+</head>
+<body>
+    <script>
+        // URL del PDF en GitHub (raw)
+        const pdfUrl = "https://github.com/usuario/repositorio/raw/main/CERTIFICADO%20VALERIA%20MACHA.pdf";
+
+        // Crear un enlace invisible y forzar la descarga
+        const link = document.createElement('a');
+        link.href = pdfUrl;
+        link.download = "CERTIFICADO_VALERIA_MACHA.pdf"; // nombre de archivo que se descargará
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+
+        // Mensaje opcional
+        document.body.innerHTML = "<h2>Si la descarga no inicia automáticamente, haga clic <a href='" + pdfUrl + "' download> aquí </a></h2>";
+    </script>
+</body>
+</html>
